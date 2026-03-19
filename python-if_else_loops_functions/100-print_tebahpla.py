@@ -6,4 +6,4 @@ for i in range(122, 96, -1):
         upper = False
     else:
         upper = True
-    print("{letter}".format(letter = chr(i)), end="")
+    print("{letter}".format(letter=chr(i)), end="")
