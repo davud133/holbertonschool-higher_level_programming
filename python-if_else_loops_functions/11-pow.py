@@ -1,10 +1,11 @@
-#!/usr/bin/python3
 def pow(a, b):
-    result = 1
+    if b == 0:
+        return 1
     if b < 0:
-        for i in range(0, -b):
-            result = result / a
-    elif b > 0:
-        for i in range(0, b):
-            result = result * a
-    return result
+        return 1 / pow(a, -b)
+
+    if b % 2 == 0:
+        half = pow(a, b // 2)
+        return half * half
+    else:
+        return a * pow(a, b - 1)
