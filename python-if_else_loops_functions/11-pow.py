@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 def pow(a, b):
     tmp = a
-    for i in range (1, b):
-        a = a * tmp
+    if b < 0:
+        for i in range(0, b, -1):
+            a = a / tmp
+    elif b > 0:
+        for i in range(1, b):
+            a = a * tmp
     return a
