@@ -15,7 +15,7 @@ if __name__ == "__main__":
         elif sys.argv[2] == '*':
             print("{a} * {b} = {result}".format(a=a, b=b, result=a * b))
         elif sys.argv[2] == '/':
-            print("{a} / {b} = {result}".format(a=a, b=b, result=a / b))
+            print("{a} / {b} = {result}".format(a=a, b=b, result=int(a / b)))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
