@@ -2,4 +2,5 @@
 def print_sorted_dictionary(a_dictionary):
     sorted_key = sorted(a_dictionary)
     new_dict = {x:a_dictionary[x] for x in sorted_key}
-    print(new_dict)
+    for i, v in new_dict.items():
+        print("{key}: {value}".format(key=i, value=v))
