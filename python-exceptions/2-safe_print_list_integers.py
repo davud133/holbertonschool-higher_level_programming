@@ -9,6 +9,9 @@ def safe_print_list_integers(my_list=[], x=0):
         except TypeError:
             i += 1
             continue
+        except ValueError:
+            i += 1
+            continue
         i += 1
     print()
     return k
