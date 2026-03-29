@@ -34,7 +34,7 @@ C.
 <BLANKLINE>
 
 >>> text_indentation("   Leading spaces.   Next.")
-Leading spaces.
+Leading spaces.   
 <BLANKLINE>
 Next.
 <BLANKLINE>
