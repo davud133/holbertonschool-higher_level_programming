@@ -8,5 +8,7 @@ def lazy_matrix_mul(m_a, m_b):
     """Multiplies two matrices using NumPy"""
     try:
         return np.matmul(m_a, m_b)
-    except Exception:
-        raise ValueError("Scalar operands are not allowed, use '*' instead")
+    except ValueError as e:
+        if "did not contain a loop with signature matching types" in str(e):
+            raise ValueError("Scalar operands are not allowed, use '*' instead")
+        raise
