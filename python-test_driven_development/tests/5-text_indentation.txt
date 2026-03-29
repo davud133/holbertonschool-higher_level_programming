@@ -38,6 +38,7 @@ Leading spaces.
 <BLANKLINE>
 Next.
 <BLANKLINE>
+<BLANKLINE>
 
 >>> text_indentation(123)
 Traceback (most recent call last):
