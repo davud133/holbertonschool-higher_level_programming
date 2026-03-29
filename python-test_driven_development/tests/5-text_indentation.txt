@@ -33,8 +33,8 @@ B:
 C.
 <BLANKLINE>
 
->>> text_indentation("   Leading spaces.   Next.")
-Leading spaces.   
+>>> text_indentation("   Leading spaces.Next.")
+Leading spaces.
 <BLANKLINE>
 Next.
 <BLANKLINE>
