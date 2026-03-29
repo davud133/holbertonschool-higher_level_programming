@@ -12,7 +12,8 @@ def lazy_matrix_mul(m_a, m_b):
         msg = str(e)
 
         if (
-            "ufunc 'multiply' did not contain a loop with signature matching types" in msg
+            ("ufunc 'multiply' did not contain a loop"
+            + "with signature matching types") in msg
         ):
             raise ValueError(
                 "Scalar operands are not allowed, use '*' instead"
@@ -25,5 +26,3 @@ def lazy_matrix_mul(m_a, m_b):
             raise ValueError("setting an array element with a sequence.")
 
         raise
-
-
