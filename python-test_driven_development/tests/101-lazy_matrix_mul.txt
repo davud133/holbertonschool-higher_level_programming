@@ -1,3 +1,5 @@
+>>> import sys
+>>> sys.path.append("..")
 >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
@@ -10,15 +12,20 @@ array([[13, 16]])
 >>> lazy_matrix_mul([[1, 2]], [[1, 2]])
 Traceback (most recent call last):
 ...
-ValueError: shapes (1,2) and (1,2) not aligned
+ValueError: shapes (1,2) and (1,2) not aligned: 2 (dim 1) != 1 (dim 0)
 
 >>> lazy_matrix_mul("not a list", [[1]])
 Traceback (most recent call last):
 ...
-TypeError: ...
+ValueError: Scalar operands are not allowed, use '*' instead
 
 >>> lazy_matrix_mul([[1]], "not a list")
 Traceback (most recent call last):
 ...
-TypeError: ...
 ValueError: Scalar operands are not allowed, use '*' instead
+
+
+
+
+
+
