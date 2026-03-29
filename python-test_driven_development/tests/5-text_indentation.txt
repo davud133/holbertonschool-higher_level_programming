@@ -7,7 +7,6 @@ How are you?
 <BLANKLINE>
 I am fine:
 <BLANKLINE>
-<BLANKLINE>
 
 >>> text_indentation("This is a test. Another one? Yes: done.")
 This is a test.
@@ -38,7 +37,6 @@ C.
 Leading spaces.
 <BLANKLINE>
 Next.
-<BLANKLINE>
 <BLANKLINE>
 
 >>> text_indentation(123)
