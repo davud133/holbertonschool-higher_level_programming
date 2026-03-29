@@ -34,6 +34,11 @@ Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
+>>> add_integer(2)
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'b'
+
 >>> add_integer(float('inf'))
 Traceback (most recent call last):
 ...
