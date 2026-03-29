@@ -6,6 +6,15 @@ import numpy as np
 
 def lazy_matrix_mul(m_a, m_b):
     """Multiply 2 matrices using NumPy."""
-    if np.isscalar(m_a) or np.isscalar(m_b):
-        raise ValueError("Scalar operands are not allowed, use '*' instead")
-    return np.dot(m_a, m_b)
+    try:
+        return np.dot(m_a, m_b)
+    except Exception as e:
+        msg = str(e)
+
+        if "ufunc 'multiply' did not contain a loop with signature matching types" in msg:
+            raise ValueError("Scalar operands are not allowed, use '*' instead")
+
+        if "data type must provide an itemsize" in msg:
+            raise TypeError("invalid data type for einsum")
+
+        raise
