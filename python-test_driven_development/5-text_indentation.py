@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"""This module defines a function that prints text with indentation."""
+
 
 def text_indentation(text):
     """Prints a text with 2 new lines after '.', '?' and ':'."""
