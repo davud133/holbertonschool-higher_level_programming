@@ -4,10 +4,10 @@
 
 def matrix_divided(matrix, div):
     """
-    returns a new matrix which 
+    returns a new matrix which
     elements are matrix's elements divided by div
     """
-    if not type(matrix) == list:
+    if not type(matrix) is list:
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats"
         )
@@ -22,7 +22,7 @@ def matrix_divided(matrix, div):
             )
     new_matrix = []
     for i in range(0, len(matrix)):
-        if not type(matrix[i]) == list:
+        if not type(matrix[i]) is list:
             raise TypeError(
                 "matrix must be a matrix (list of lists) of integers/floats"
             )
@@ -30,7 +30,8 @@ def matrix_divided(matrix, div):
         for j in range(0, len(matrix[i])):
             if not type(matrix[i][j]) in [int, float]:
                 raise TypeError(
-                    "matrix must be a matrix (list of lists) of integers/floats"
+                    "matrix must be a matrix
+                    (list of lists) of integers/floats"
                 )
             row.append(round(matrix[i][j] / div, 2))
         new_matrix.append(row)
