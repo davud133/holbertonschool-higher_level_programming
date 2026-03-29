@@ -17,4 +17,7 @@ def lazy_matrix_mul(m_a, m_b):
         if "data type must provide an itemsize" in msg:
             raise TypeError("invalid data type for einsum")
 
+        if "setting an array element with a sequence." in msg:
+            raise ValueError("setting an array element with a sequence.")
+
         raise
