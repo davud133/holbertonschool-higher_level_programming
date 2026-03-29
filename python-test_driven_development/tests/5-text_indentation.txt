@@ -2,42 +2,45 @@
 
 >>> text_indentation("Hello. How are you? I am fine:")
 Hello.
-
+<BLANKLINE>
 How are you?
-
+<BLANKLINE>
 I am fine:
+<BLANKLINE
 
 >>> text_indentation("This is a test. Another one? Yes: done.")
 This is a test.
-
+<BLANKLINE>
 Another one?
-
+<BLANKLINE>
 Yes:
-
+<BLANKLINE>
 done.
+<BLANKLINE>
 
 >>> text_indentation("No punctuation here")
 No punctuation here
 
 >>> text_indentation("End with dot.")
 End with dot.
+<BLANKLINE>
 
 >>> text_indentation("A: B: C.")
 A:
-
+<BLANKLINE>
 B:
-
+<BLANKLINE>
 C.
+<BLANKLINE>
 
 >>> text_indentation("   Leading spaces.   Next.")
-   Leading spaces.
-
+Leading spaces.
+<BLANKLINE>
 Next.
+<BLANKLINE>
 
 >>> text_indentation(123)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
-
-
 
