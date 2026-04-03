@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 class Square:
-    """ Class about Square"""
+    """Defines a class about Square"""
 
     pass
