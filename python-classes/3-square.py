@@ -5,7 +5,7 @@
 class Square:
     """defines a class square"""
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         """initilize the size variable"""
         if type(size) is not int:
             raise TypeError("size must be an integer")
