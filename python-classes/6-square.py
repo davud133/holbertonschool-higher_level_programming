@@ -43,7 +43,7 @@ class Square:
     @position.setter
     def position(self, value):
         """sets the value of position"""
-         if not (type(value) == tuple and
+        if not (type(value) == tuple and
                 len(value) == 2 and
                 type(value[0]) == int and
                 type(value[1]) == int and
