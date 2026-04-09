@@ -75,6 +75,6 @@ class Square:
             for y in range(0, self.__size):
                 for px in range(0, self.__position[0]):
                     square_string = square_string + " "
-                square_string = square_string + "#" * self.__size + "\n"
+                square_string = square_string + "#" * self.__size + ("\n" if y != self.__size - 1 else "")
         return square_string
 
