@@ -21,6 +21,7 @@ class Node:
         """sets the value of data"""
         if type(value) is not int:
             raise TypeError("data must be an integer")
+        self.__data = value
     @property
     def next_node(self):
         """retrieves the next node"""
@@ -28,15 +29,19 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         """sets the next node"""
-        if type(value) is not None or not isinstance(next_node, Node):
+        if value is None:
+            self.__next_node = None
+        elif isinstance(value, Node):
+            self.__next_node = value
+        else:
             raise TypeError("next_node must be a Node object")
 
 class SinglyLinkedList:
     """defines a SinglyLinkedList"""
 
-    def __init__(self, head=None):
+    def __init__(self):
         """initilizes the class"""
-        self.__head = head
+        self.__head = None
     def __str__(self):
         stringg = ""
         current = self.__head
@@ -56,12 +61,15 @@ class SinglyLinkedList:
             self.__head = new_node
         elif self.__head.data > value:
             new_node.next_node = self.__head
+            self.__head = new_node
         else:
             while current is not None:
                 if current.next_node is None:
                     current.next_node = new_node
+                    break
                 elif current.next_node.data < value:
                     current = current.next_node
                 else:
                     new_node.next_node = current.next_node
                     current.next_node = new_node
+                    break
