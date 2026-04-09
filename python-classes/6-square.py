@@ -49,16 +49,16 @@ class Square:
                 type(value[1]) == int and
                 value[0] >= 0 and value[1] >= 0):
             raise TypeError("position must be a tuple of 2 positive integers")
-        position = value
+        self.__position = value
     def area(self):
         """returns the area"""
         return self.__size ** 2
 
     def my_print(self):
         """print the square"""
-        for px in range(0, position[1]):
+        for px in range(0, self.__position[1]):
             print()
-        for py in range(0, position[0]):
+        for py in range(0, self.__position[0]):
             print(" ", end="")
         for y in range(0, self.__size):
             print("#" * self.__size)
