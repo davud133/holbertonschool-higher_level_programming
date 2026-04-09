@@ -78,4 +78,3 @@ class Square:
                     ss = ss + " "
                 ss + "#" * self.size + ("\n" if y != self.size - 1 else "")
         return ss
-
