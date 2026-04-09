@@ -65,16 +65,17 @@ class Square:
                 for px in range(0, self.__position[0]):
                     print(" ", end="")
                 print("#" * self.__size)
+
     def __str__(self):
-        square_string = ""
+        ss = ""
         if self.__size == 0:
-            return square_string
+            return ss
         else:
             for py in range(0, self.__position[1]):
-                square_string = square_string + "\n"
+                ss = ss + "\n"
             for y in range(0, self.__size):
                 for px in range(0, self.__position[0]):
-                    square_string = square_string + " "
-                square_string = square_string + "#" * self.__size + ("\n" if y != self.__size - 1 else "")
-        return square_string
+                    ss = ss + " "
+                ss + "#" * self.size + ("\n" if y != self.size - 1 else "")
+        return ss
 
