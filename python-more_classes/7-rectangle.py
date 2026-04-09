@@ -53,7 +53,7 @@ class Rectangle:
     def print_symbol(self):
         """returns the print print_symbol"""
         return str(self.print_symbol)
-    @printsymbol.setter
+    @print_symbol.setter
     def print_symbol(self, value):
         """sets the print_symbol"""
         self.print_symbol = str(value)
