@@ -29,8 +29,8 @@ class Node:
     def next_node(self):
         """retrieves the next node"""
         return self.__next_node
-    @next_node.setter
 
+    @next_node.setter
     def next_node(self, value):
         """sets the next node"""
         if value is None:
@@ -39,6 +39,7 @@ class Node:
             self.__next_node = value
         else:
             raise TypeError("next_node must be a Node object")
+
 
 class SinglyLinkedList:
     """defines a SinglyLinkedList"""
