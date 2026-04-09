@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """defines a singly linked list"""
 
+
 class Node:
     """defines a singly linked list node class"""
     def __init__(self, data=0, next_node=None):
@@ -8,7 +9,7 @@ class Node:
         if type(data) is not int:
             raise TypeError("data must be an integer")
         self.__data = data
-        if not (next_node == None or isinstance(next_node, Node)):
+        if not (next_node is None or isinstance(next_node, Node)):
             raise TypeError("next_node must be a Node object")
         self.__next_node = next_node
 
@@ -16,17 +17,20 @@ class Node:
     def data(self):
         """retrieve data"""
         return self.__data
+
     @data.setter
     def data(self, value):
         """sets the value of data"""
         if type(value) is not int:
             raise TypeError("data must be an integer")
         self.__data = value
+
     @property
     def next_node(self):
         """retrieves the next node"""
         return self.__next_node
     @next_node.setter
+
     def next_node(self, value):
         """sets the next node"""
         if value is None:
@@ -42,6 +46,7 @@ class SinglyLinkedList:
     def __init__(self):
         """initilizes the class"""
         self.__head = None
+
     def __str__(self):
         stringg = ""
         current = self.__head
@@ -52,6 +57,7 @@ class SinglyLinkedList:
                 stringg += str(current.data) + "\n"
             current = current.next_node
         return stringg
+
     def sorted_insert(self, value):
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
