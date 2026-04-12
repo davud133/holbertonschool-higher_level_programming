@@ -4,4 +4,4 @@
 
 def lookup(obj):
     """returns the documentation of an object"""
-    return obj.__doc__
+    return dir(obj)
