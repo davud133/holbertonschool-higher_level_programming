@@ -70,7 +70,6 @@ Check integer_validator() with None:
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] value must be an integer
-Regular tests passed
 
 [exec_bash_compare] Command to run:
 python3 -m doctest ./tests/7-base_geometry.txt
