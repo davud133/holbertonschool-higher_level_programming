@@ -47,6 +47,6 @@ class Rectangle(Shape):
         return 2 * (self.width + self.height)
 
 def shape_info(obj):
-    """prints the area and the perimeter with the ducktyping"""
-    print(obj.area())
-    print(obj.perimeter())
+    """prints the area and perimeter"""
+    print("Area: {}".format(obj.area()))
+    print("Perimeter: {}".format(obj.perimeter()))
