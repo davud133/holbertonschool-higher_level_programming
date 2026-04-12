@@ -4,6 +4,4 @@
 
 def inherits_from(obj, a_class):
     """checks if an object is instance of class that inherited from another class"""
-    if isinstance(obj, a_class) and len(a_class.__mro__) > 2:
-        return True
-    return False
+    return isinstance(obj, a_class) and type(obj) != a_class
