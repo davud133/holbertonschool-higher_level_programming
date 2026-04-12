@@ -6,7 +6,7 @@ class CountedIterator:
     def __init__(self, obj):
         self.iterator = iter(obj)
         self.counter = 0
-    @property
+
     def get_count(self):
         return self.counter
 
