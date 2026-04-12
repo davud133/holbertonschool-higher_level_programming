@@ -82,3 +82,16 @@ Check integer_validator() with None:
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", {3, 4})
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", True)
+...     print("No exception")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+No exception
