@@ -6,15 +6,15 @@ from abc import ABC, abstractmethod
 
 
 class VerboseList(list):
-    def append(self, item):
+    def append(item):
         super().append(item)
         print("Added [{item}] to the list.".format(item=item))
-    def extend(self, items):
+    def extend(items):
         super().extend(items)
         print("Extended the list with [{x}] items.".format(x=len(items)))
-    def remove(self, item):
+    def remove(item):
         print("Removed [{item}] from the list.".format(item=item))
         super().remove(item)
-    def pop(self, item=len(self) - 1):
+    def pop(item=len(self) - 1):
         print("Popped [{item}] from the list.".format(item=self[item]))
         super().pop(item)
