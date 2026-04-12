@@ -70,8 +70,29 @@ Check integer_validator() with None:
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] value must be an integer
->>> try:
-...     bg.integer_validator("flag", True)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
+Regular tests passed
+
+[exec_bash_compare] Command to run:
+python3 -m doctest ./tests/7-base_geometry.txt
+su student_jail -c 'timeout 30 bash -c '"'"'python3 -m doctest ./tests/7-base_geometry.txt'"'"''
+[exec_bash_compare] Return code: 1
+[exec_bash_compare] Student stdout:
+
+File "./tests/7-base_geometry.txt", line 73, in 7-base_geometry.txt
+Failed example:
+try:
+bg.integer_validator("flag", True)
+except Exception as e:
+print("[{}] {}".format(e.__class__.__name__, e))
+Expected:
 [TypeError] flag must be an integer
+Got nothing
+
+1 items had failures:
+1 of 14 in 7-base_geometry.txt
+Test Failed 1 failures.
+[exec_bash_compare] Student stdout length: 511
+[exec_bash_compare] Student stderr:
+[exec_bash_compare] Student stderr length: 0
+[exec_bash_compare] Desired stdout:
+[exec_bash_compare] Desired stdout length: 0
