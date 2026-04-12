@@ -6,9 +6,8 @@ class MyInt(int):
     """defines MyInt class"""
     def __eq__(self, other):
         """checks if not equal"""
-        return self != other
+        return super().__ne__(self, other)
 
     def __ne__(self, other):
         """checks if equal"""
-        return self == other
-
+        return super().__eq__(self, other)
