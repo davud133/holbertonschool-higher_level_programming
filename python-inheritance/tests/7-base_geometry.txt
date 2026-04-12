@@ -91,7 +91,6 @@ Check integer_validator() with None:
 
 >>> try:
 ...     bg.integer_validator("age", True)
-...     print("No exception")
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-No exception
+[TypeError] age must be an integer
