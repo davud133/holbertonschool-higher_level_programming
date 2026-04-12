@@ -76,3 +76,9 @@ Check integer_validator() with None:
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> try:
+...     bg.integer_validator("age", (4,))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
