@@ -15,13 +15,13 @@ if __name__ == "__main__":
             table[str(data[-2])]+=1
             line_c+=1
             if line_c % 10 == 0:
-                print("File size: " + file_size)
+                print("File size: " + str(file_size))
                 for k, v in table.items():
                     print("{k}: {v}".format(k=k, v=v))
-        print("File size: " + file_size)
+        print("File size: " + str(file_size))
         for k, v in table.items():
             print("{k}: {v}".format(k=k, v=v))
     except KeyboardInterrupt:
-        print("File size: " + file_size)
+        print("File size: " + str(file_size))
         for k, v in table.items():
             print("{k}: {v}".format(k=k, v=v))
