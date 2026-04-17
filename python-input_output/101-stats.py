@@ -11,7 +11,10 @@ if __name__ == "__main__":
     try:
         for line in sys.stdin:
             data = line.split()
-            file_size += int(data[-1])
+            try:
+                file_size += int(data[-1])
+            except Exception:
+                file_size += 0
             table[str(data[-2])]+=1
             line_c+=1
             if line_c % 10 == 0:
