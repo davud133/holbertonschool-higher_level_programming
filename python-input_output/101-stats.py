@@ -18,6 +18,9 @@ if __name__ == "__main__":
                 print("File size: " + file_size)
                 for k, v in table.items():
                     print("{k}: {v}".format(k=k, v=v))
+        print("File size: " + file_size)
+        for k, v in table.items():
+            print("{k}: {v}".format(k=k, v=v))
     except KeyboardInterrupt:
         print("File size: " + file_size)
         for k, v in table.items():
