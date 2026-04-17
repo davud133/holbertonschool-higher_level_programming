@@ -6,7 +6,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 import sys
 import json
 
-my_list = []
+my_list = load_from_json_file('add_item.json')
 
 for i in range(1, len(sys.argv)):
     my_list.append(sys.argv[i])
