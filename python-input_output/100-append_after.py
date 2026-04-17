@@ -3,6 +3,7 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """appends the new string"""
     data = ""
     with open(filename, 'r', encoding="utf-8") as f:
         data = f.read()
