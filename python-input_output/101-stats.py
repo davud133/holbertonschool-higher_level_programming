@@ -14,7 +14,7 @@ if __name__ == "__main__":
             try:
                 file_size += int(data[-1])
             except Exception:
-                file_size += 0
+                continue
             table[str(data[-2])]+=1
             line_c+=1
             if line_c % 10 == 0:
