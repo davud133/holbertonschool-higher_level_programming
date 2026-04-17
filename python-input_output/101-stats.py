@@ -17,11 +17,14 @@ if __name__ == "__main__":
             if line_c % 10 == 0:
                 print("File size: " + str(file_size))
                 for k, v in table.items():
-                    print("{k}: {v}".format(k=k, v=v))
+                    if v != 0:
+                        print("{k}: {v}".format(k=k, v=v))
         print("File size: " + str(file_size))
         for k, v in table.items():
-            print("{k}: {v}".format(k=k, v=v))
+            if v != 0:
+                print("{k}: {v}".format(k=k, v=v))
     except KeyboardInterrupt:
         print("File size: " + str(file_size))
         for k, v in table.items():
-            print("{k}: {v}".format(k=k, v=v))
+            if v != 0:
+                print("{k}: {v}".format(k=k, v=v))
