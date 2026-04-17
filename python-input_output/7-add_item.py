@@ -10,5 +10,5 @@ my_list = []
 
 for i in range(1, len(sys.argv)):
     my_list.append(sys.argv[i])
-with open(add_item.json, 'w', encoding="utf-8") as f:
+with open('add_item.json', 'w', encoding="utf-8") as f:
     f.write(json.dumps(my_list))
