@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""ip tracker"""
+"""reads stdin line by line and computes metrics"""
 
 
 import sys
