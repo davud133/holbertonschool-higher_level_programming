@@ -5,7 +5,10 @@
 import sys
 
 file_size = 0
-table = {"200": 0 , "301": 0, "400": 0, "401": 0, "403": 0, "404": 0, "405": 0, "500": 0}
+table = {"200": 0, "301": 0,
+         "400": 0, "401": 0,
+         "403": 0, "404": 0,
+         "405": 0, "500": 0}
 line_c = 0
 if __name__ == "__main__":
     try:
@@ -14,10 +17,10 @@ if __name__ == "__main__":
             try:
                 file_size += int(data[-1])
                 if data[-2] in table:
-                    table[str(data[-2])]+=1
+                    table[str(data[-2])] += 1
             except Exception:
                 file_size += 0
-            line_c+=1
+            line_c += 1
             if line_c % 10 == 0:
                 print("File size: " + str(file_size))
                 for k, v in table.items():
