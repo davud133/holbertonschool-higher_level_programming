@@ -13,10 +13,10 @@ if __name__ == "__main__":
             data = line.split()
             try:
                 file_size += int(data[-1])
+                if data[-2] in table:
+                    table[str(data[-2])]+=1
             except Exception:
                 file_size += 0
-            if data[-2] in table:
-                table[str(data[-2])]+=1
             line_c+=1
             if line_c % 10 == 0:
                 print("File size: " + str(file_size))
