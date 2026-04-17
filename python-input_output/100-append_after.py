@@ -6,13 +6,11 @@ def append_after(filename="", search_string="", new_string=""):
     """appends the new string"""
     data = ""
     with open(filename, 'r', encoding="utf-8") as f:
-        data = f.read()
-
-    pos = data.find(search_string)
-    if pos == -1:
-        return "String Not Found"
-    pos = pos + len(search_string)
-    data = data[:pos] + new_string + data[pos:]
+        for line in f:
+            pos = line.find(search_string)
+            if pos == -1:
+                data += line
+                continue
+            data = data + line + new_string
     with open(filename, 'w', encoding="utf-8") as f:
         f.write(data)
-
