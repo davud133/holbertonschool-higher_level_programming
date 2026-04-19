@@ -13,7 +13,7 @@ class CustomObject:
 
     def display(self):
         """displays the object"""
-        print("Name: {n}\nAge: {a}\nIs Student: {s}".format(n=name, a=age, s=is_student))
+        print("Name: {n}\nAge: {a}\nIs Student: {s}".format(n=self.name, a=self.age, s=self.is_student))
 
     def serialize(self, filename):
         """serializes the data"""
