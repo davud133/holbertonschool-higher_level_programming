@@ -4,6 +4,8 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+users = {}
+
 @app.route("/")
 def home():
     return "Welcome to the Flask API!"
@@ -23,16 +25,16 @@ def user(username):
     else:
         return jsonify({"error": "User not found"}), 404
 
-@app.route("/add_user")
+@app.route("/add_user", methods=["POST"])
 def add_user():
     data = request.get_json()
     if data is None:
         return jsonify({"error": "Invalid JSON"}), 400
     if not data.get('username'):
         return jsonify({"error":"Invalid JSON"}), 400
-    if data.get('username') in users:
+    if users[data.get('username')]:
         return jsonify({"error":"Username already exists"}), 409
-    users.append(data)
+    users[data.get('username')] = data
     return jsonify(data), 201
 
 if __name__ == "__main__":
