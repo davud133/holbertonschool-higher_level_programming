@@ -64,13 +64,13 @@ def login():
     username = data.get("username")
     password = data.get("password")
     if not username or not password:
-        return jsonify({"error": "Invalid credentials"}), 400
+        return jsonify({"error": "Invalid credentials"}), 401
 
     user = users.get(username)
     if not user:
-        return jsonify({"error": "Invalid credentials"}), 400
+        return jsonify({"error": "Invalid credentials"}), 401
     if not check_password_hash(user["password"], password):
-        return jsonify({"error": "Invalid credentials"}), 400
+        return jsonify({"error": "Invalid credentials"}), 401
 
     token = create_access_token(
         identity=username,
