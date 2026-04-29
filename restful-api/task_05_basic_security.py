@@ -25,10 +25,15 @@ jwt = JWTManager(app)
 
 @auth.verify_password
 def verify_password(username, password):
-    for user, data in users.items():
+    user = users.get(username)
+    if user and check_password_hash(user["password"], password):
+        return username
+
+    for data in users.values():
         if data["username"] == username:
             if check_password_hash(data["password"], password):
                 return username
+    return False
 
 @app.route("/")
 def Home():
