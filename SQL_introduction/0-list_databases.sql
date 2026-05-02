@@ -1,1 +1,2 @@
+--Shows all the DATABASES
 SHOW DATABASES
