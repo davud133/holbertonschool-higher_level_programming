@@ -1,2 +1,2 @@
 -- avarages
-SELECT name, AVG(temperature) FROM temperatures GROUP BY name ORDER BY temperature DESC
+SELECT city, AVG(temperature) AS avg_temp FROM temperatures GROUP BY city ORDER BY temperature DESC
