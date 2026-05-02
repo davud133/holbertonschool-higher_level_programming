@@ -1,2 +1,2 @@
 -- shows all rows
-SHOW ROWS FROM first_table;
+SHOW COLUMNS FROM first_table;
