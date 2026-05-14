@@ -14,7 +14,7 @@ if __name__ == "__main__":
             sys.argv[3]
         )
     )
-    Session = sessionmaker(bing=engine)
+    Session = sessionmaker(bind=engine)
 
     session = Session()
     states = session.query(State).order_by(State.id).all()
