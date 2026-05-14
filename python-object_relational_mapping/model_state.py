@@ -3,7 +3,7 @@
 import sqlalchemy
 import sqlalchemy.ext.declarative
 
-Base = declerative_base()
+Base = declarative_base()
 
 class State(Base):
     """State class"""
