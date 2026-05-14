@@ -1,3 +1,5 @@
 -- gives cities
 SELECT id, name FROM cities
-WHERE id = state_id ORDER BY id ASC;
+WHERE state_id = (
+  SELECT id FROM states WHERE name = "California"
+) ORDER BY id ASC;
