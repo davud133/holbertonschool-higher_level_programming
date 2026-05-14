@@ -16,7 +16,9 @@ if __name__ == "__main__":
         """SELECT cities.name FROM cities JOIN states ON cities.state_id = states.id WHERE states.name = %s ORDER BY cities.id ASC""", (sys.argv[4],)
     )
     cities = cursor.fetchall()
-    for city in cities:
-        print(city[0])
+    for i in range(0, len(cities)):
+        print(city[0], end="")
+        if i != len(cities) - 1:
+            print(", ", end="")
     cursor.close()
     db.close()
