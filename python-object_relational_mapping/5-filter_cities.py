@@ -17,7 +17,7 @@ if __name__ == "__main__":
     )
     cities = cursor.fetchall()
     for i in range(0, len(cities)):
-        print(city[0], end="")
+        print(cities[i][0], end="")
         if i != len(cities) - 1:
             print(", ", end="")
     cursor.close()
