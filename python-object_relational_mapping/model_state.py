@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """contains the class definition of a State"""
-import sqlalchemy
+from sqlalchemy import Column
+from sqlalchemy import Integer
+from sqlalchemy import String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
