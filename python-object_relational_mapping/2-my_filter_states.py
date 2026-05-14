@@ -15,6 +15,8 @@ if __name__ == "__main__":
         "SELECT * FROM states WHERE name = '{name}'".format(name=sys.argv[4])
     )
 
-    print(cursor.fetchall())
+    states = cursor.fetchall()
+    for state in states:
+        print(state)
     cursor.close()
     db.close()
