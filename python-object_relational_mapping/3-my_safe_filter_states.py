@@ -13,7 +13,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute(
         "SELECT * FROM states WHERE BINARY name = %s",
-        (name,)
+        (sys.argv[4],)
     )
 
     states = cursor.fetchall()
