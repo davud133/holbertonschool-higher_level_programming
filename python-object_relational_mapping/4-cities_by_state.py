@@ -13,7 +13,7 @@ if __name__ == "__main__":
                          )
     cursor = db.cursor()
     cursor.execute(
-        "SELECT * FROM cities ORDER BY id ASC"
+        "SELECT id, name, states.name FROM cities JOIN states ON cities.state_id = states.id ORDER BY id ASC"
     )
     cities = cursor.fetchall()
     for city in cities:
