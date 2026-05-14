@@ -20,5 +20,7 @@ if __name__ == "__main__":
         print(cities[i][0], end="")
         if i != len(cities) - 1:
             print(", ", end="")
+        else:
+            print()
     cursor.close()
     db.close()
