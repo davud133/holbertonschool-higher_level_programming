@@ -18,6 +18,6 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State).order_by(State.id).first()
-    print("{}: {}".format(states[0].id, states[0].name))
+    print("{}: {}".format(states.id, states.name))
 
     session.close()
