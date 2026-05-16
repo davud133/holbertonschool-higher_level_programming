@@ -20,5 +20,5 @@ if __name__ == "__main__":
     s = d.query(State).filter(State.name.like("%a%")).order_by(State.id).all()
     for t in s:
         d.delete(t)
-        d.commit()
+    d.commit()
     d.close()
