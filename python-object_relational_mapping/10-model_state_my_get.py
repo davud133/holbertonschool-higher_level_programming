@@ -16,8 +16,8 @@ if __name__ == "__main__":
     )
     Session = sessionmaker(bind=engine)
     s = Session()
-
-    st = s.query(State).filter(State.name == sys.argv[4]).order_by(State.id).first()
+    n = sys.argv[4]
+    st = s.query(State).filter(State.name == n).order_by(State.id).first()
     if st is not None:
         print(st.id)
     else:
