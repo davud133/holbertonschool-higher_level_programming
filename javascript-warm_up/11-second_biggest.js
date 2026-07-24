@@ -12,8 +12,8 @@ if (argv.length <= 3) {
       second = first;
       first = parseInt(argv[i]);
     }
-    if(parseInt(argv[i]) > second && parseInt(argv[i]) !== first){
-      second = parseInt(argv[i])
+    if (parseInt(argv[i]) > second && parseInt(argv[i]) !== first) {
+      second = parseInt(argv[i]);
     }
   }
   console.log(second);
